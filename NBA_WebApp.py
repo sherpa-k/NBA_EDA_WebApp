@@ -1,3 +1,4 @@
+import PIL
 import streamlit as st
 import pandas as pd
 import io
@@ -75,10 +76,12 @@ def team_leaders(team):
 
 def get_player_pic(player):
     pid = player_df.loc[player_df['PLAYER_NAME'] == player, "PLAYER_ID"].values[0]
-    r = requests.get(f'https://cdn.nba.com/headshots/nba/latest/1040x760/{pid}.png')
-    img_file = io.BytesIO(r.content)
-    image = Image.open(img_file)
-
+    try:
+        r = requests.get(f'https://cdn.nba.com/headshots/nba/latest/1040x760/{pid}.png')
+        img_file = io.BytesIO(r.content)
+        image = Image.open(img_file)
+    except PIL.UnidentifiedImageError:
+        return False
     return image
 
 
@@ -242,7 +245,11 @@ with st.container():
                         st.markdown(f'<h5 style="text-align: center;">{round(ppg,1)}</h5>',
                                         unsafe_allow_html=True)
                         img = get_player_pic(pname)
-                        st.image(img, width=265)
+                        if img:
+                            st.image(img, width=265)
+                        else:
+                            st.markdown(f'<h5 style="text-align: center;">Player Image Not Found</h5>',
+                                        unsafe_allow_html=True)
 
 
                     with col2b:
@@ -253,7 +260,11 @@ with st.container():
                         st.markdown(f'<h5 style="text-align: center;">{round(apg, 1)}</h5>',
                                     unsafe_allow_html=True)
                         img = get_player_pic(aname)
-                        st.image(img, width=265)
+                        if img:
+                            st.image(img, width=265)
+                        else:
+                            st.markdown(f'<h5 style="text-align: center;">Player Image Not Found</h5>',
+                                        unsafe_allow_html=True)
 
 
                     with col2c:
@@ -264,4 +275,8 @@ with st.container():
                         st.markdown(f'<h5 style="text-align: center;">{round(rpg, 1)}</h5>',
                                     unsafe_allow_html=True)
                         img = get_player_pic(rname)
-                        st.image(img, width=265)
+                        if img:
+                            st.image(img, width=265)
+                        else:
+                            st.markdown(f'<h5 style="text-align: center;">Player Image Not Found</h5>',
+                                        unsafe_allow_html=True)
