@@ -7,12 +7,18 @@ End to end data analysis/visualization on NBA team statistics for the 2022-23 se
 
 ## Getting started
 Cloning the repo through terminal:
+
 ```https://github.com/sherpa-k/NBA_EDA_WebApp.git```
 
+
 Install required dependencies:
+
+
 ```pip install requirements.txt```
 
+
 Run the program:
+
 ```streamlit run ./NBA_WebApp.py```
 
 #### Data Generated from multiple sources:
