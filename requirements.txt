@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+nba_api==1.2
+num2words==0.5.12
+numpy==1.24.2
+pandas==1.5.3
+Pillow==9.5.0
+requests==2.28.2
+streamlit==1.20.0
