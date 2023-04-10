@@ -6,6 +6,11 @@ End to end data analysis/visualization on NBA team statistics for the 2022-23 se
 ![okc](examples/thunder.png)
 
 ## Getting started
+Check out the site here:
+
+https://sherpa-k-nba-eda-webapp-nba-webapp-9pb95p.streamlit.app/
+
+#### Locally
 Cloning the repo through terminal:
 
 ```https://github.com/sherpa-k/NBA_EDA_WebApp.git```
