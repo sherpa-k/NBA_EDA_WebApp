@@ -13,7 +13,6 @@ player_df = pd.read_csv(r"Player_stats.csv")
 team_df = pd.read_csv(r"Team-stats.csv")
 standings = pd.read_csv('Standings.csv')
 advanced_df = pd.read_csv('advanced_stats.csv')
-player_shots_df = pd.read_csv('player_shots.csv')
 
 
 # Get Metrics
