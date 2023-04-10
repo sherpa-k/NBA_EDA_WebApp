@@ -3,7 +3,7 @@
 ## Description 
 End to end data analysis/visualization on NBA team statistics for the 2022-23 season using streamlit. After selecting a team, the program displays a team's offensive, defensive and net ratings along with the top individual performers of the team and other performance metrics.
 
-![okc](examples/thunder.png | width=150)
+![okc](examples/thunder.png =150x100)
 
 ## Getting started
 Cloning the repo through terminal:
