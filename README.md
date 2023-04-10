@@ -21,12 +21,13 @@ Run the program:
 
 ```streamlit run ./NBA_WebApp.py```
 
-#### Data Generated from multiple sources:
+
+## Data
 We used swar's ```nba_api``` to call data for player and team stats as well as team standings. Using BeautifulSoup we html parsed data from https://www.basketball-reference.com/ to generate advanced statistics on teams(offensive, defensive and net ratings, etc.)
 
 We parsed team logos from https://loodibee.com/ and player headshots from https://www.nba.com/
 
-#### Additional Features
+## Additional Features (Future)
 In the future I will be adding:
 - a match predictor using Monte Carlo simulations
 - a shot chart displaying a team/player's shooting performance
