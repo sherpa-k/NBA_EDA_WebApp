@@ -16,10 +16,15 @@ Cloning the repo through terminal:
 ```https://github.com/sherpa-k/NBA_EDA_WebApp.git```
 
 
+Move into project directory
+
+```cd NBA_EDA_WebApp/```
+
+
 Install required dependencies:
 
 
-```pip install requirements.txt```
+```pip install -r requirements.txt```
 
 
 Run the program:
